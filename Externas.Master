@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Externas.master.cs" Inherits="Ibope.MediaPricing.Web.templates.Externas" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="author" content="MediaDNA - Kantar Ibope Media"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="keywords" content="media pricing, sistema precificação mídia, cotação publicidade, planejamento mídia, gestão campanhas publicitárias, orçamento mídia digital, pricing televisão, digital media pricing, automated pricing, media planning software, advertising cost calculator">
+    <meta name="description" content="Plataforma de precificação de mídia, análise comparativa de veículos e otimização de investimento publicitário. Gerencie campanhas em uma solução integrada.">
+    <title>Media Pricing - <%= Page.Title %></title>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a417f6b6-80c7-4e1c-99f0-dafe7a93e54f" data-blockingmode="auto" type="text/javascript"></script>
+    <%-- Bundles CSS --%>
+    <%: Styles.Render("~/Content/jquery-ui") %>
+    <%: Styles.Render("~/Content/master") %>
+    <link rel="shortcut icon" href="/Inc/images/MediaPricing.ico" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>    
+</head>
+<body>
+    <form id="formPrincipal" runat="server" autocomplete="off">
+        <div>
+            <div id="divMasterGeral" style="background: transparent;">
+                <div id="divMasterTopo">
+                    <div id="divMasterLogo_Esq">
+                        <img src="/Inc/img/logo_EtailProducao.png" alt="Etail Produção" />
+                    </div>
+                    <div id="divMasterLogo_Dir">
+                        <img src="/Inc/img/logo_ibope_media.png" alt="Ibope Media" />
+                    </div>
+                </div>
+                <div id="divMasterCorpo" style="background: transparent;">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="divMasterRodape" class="divMasterRodape">
+                    <span class="versao" style="color: Gray;">Versao - <%= GetVersaoSistema() %></span>
+                    <br />
+                    Copyright by KANTAR IBOPE MEDIA <%= GetAnoCorrente() %>.
+                </div>
+            </div>
+        </div>
+    </form>   
+    <%-- Bundles JavaScript - movidos para antes de </body> para melhor performance --%>
+    <%: Scripts.Render("~/Scripts/jquery") %>
+    <%: Scripts.Render("~/Scripts/jqueryui") %>
+    <%: Scripts.Render("~/Scripts/app") %>
+    <asp:ContentPlaceHolder ID="FooterContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

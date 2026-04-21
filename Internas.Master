@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Internas.master.cs" Inherits="Ibope.MediaPricing.Web.templates.Internas" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<%@ Register Src="../Inc/controls/Menu.ascx" TagName="Menu" TagPrefix="ibope" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="author" content="MediaDNA - Kantar Ibope Media"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="keywords" content="media pricing, sistema precificação mídia, cotação publicidade, planejamento mídia, gestão campanhas publicitárias, orçamento mídia digital, pricing televisão, digital media pricing, automated pricing, media planning software, advertising cost calculator">
+    <meta name="description" content="Plataforma de precificação de mídia, análise comparativa de veículos e otimização de investimento publicitário. Gerencie campanhas em uma solução integrada.">
+    <title>Media Pricing - <%= Page.Title %></title>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a417f6b6-80c7-4e1c-99f0-dafe7a93e54f" data-blockingmode="auto" type="text/javascript"></script>
+    
+    <%-- Bundles CSS --%>
+    <%: Styles.Render("~/Content/jquery-ui") %>
+    <%: Styles.Render("~/Content/master") %>
+    <%: Styles.Render("~/Content/interno") %>
+    <link rel="shortcut icon" href="/Inc/images/MediaPricing.ico" />
+        
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="formMaster" class="formMaster" runat="server">
+        <div id="divMasterGeral" class="divMasterGeral">
+            <div id="divMasterTopo">
+                <div id="divMasterLogo_Esq">
+                    <img src="/inc/img/logo_EtailProducao.png" alt="Media Pricing" />
+                </div>
+                <div id="divMasterAlerta">
+                    <img src="/inc/img/alerta.png" id="imgAlerta" runat="server" alt="Alerta" />
+                </div>
+                <div id="divMasterLogo_Dir">
+                    <img src="/inc/img/logo_ibope_media.png" alt="Ibope Media" />
+                </div>
+            </div>
+            <div id="divMasterMenu">
+                <ibope:Menu ID="MenuMaster" runat="server" />
+            </div>
+            <div id="divMasterCorpo">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="divMasterRodape" class="divMasterRodapeInterno">
+                <span class="versao">Versao -
+                <%= GetVersaoSistema() %></span>
+                <br />
+                Copyright by IBOPE <%= GetAnoCorrente() %>.
+            </div>
+        </div>
+        <%--Divs de mensagem de alerta--%>
+        <div id="dialog-message" title="Atenção" style="display: none">
+            <p>
+                <asp:Label ID="lblMensagem" class="jqueryMensagemAlerta" runat="server"></asp:Label>
+            </p>
+        </div>
+        <%----%>
+        <%--Divs de mensagem de confirmação--%>
+        <div id="dialog-message-confirm" title="Atenção" style="display: none">
+            <p>
+                <asp:Label ID="lblMensagemConfirmacao" class="jqueryMensagemConfirmacao" runat="server"></asp:Label>
+            </p>
+        </div>
+        <%----%>
+    </form>
+    
+    <%-- Bundles JavaScript - movidos para antes de </body> para melhor performance --%>
+    <%: Scripts.Render("~/Scripts/jquery") %>
+    <%: Scripts.Render("~/Scripts/jqueryui") %>
+    <%: Scripts.Render("~/Scripts/app") %>
+    
+    <asp:ContentPlaceHolder ID="FooterContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:Literal ID="otherScripts" runat="server"></asp:Literal>
+</body>
+</html>
