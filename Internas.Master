@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Internas.master.cs" Inherits="Ibope.MediaPricing.Web.templates.Internas" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Internas.master.cs" Inherits="Ibope.MediaPricing.Web.templates.Internas" %>
 <%@ Import Namespace="System.Web.Optimization" %>
 <%@ Register Src="../Inc/controls/Menu.ascx" TagName="Menu" TagPrefix="ibope" %>
 
@@ -6,20 +6,20 @@
 <html lang="pt-br">
 <head runat="server">
     <meta charset="UTF-8">
-    <meta name="author" content="MediaDNA - Kantar Ibope Media"> 
+    <meta name="author" content="IBOPE">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index">
     <meta name="keywords" content="media pricing, sistema precificação mídia, cotação publicidade, planejamento mídia, gestão campanhas publicitárias, orçamento mídia digital, pricing televisão, digital media pricing, automated pricing, media planning software, advertising cost calculator">
     <meta name="description" content="Plataforma de precificação de mídia, análise comparativa de veículos e otimização de investimento publicitário. Gerencie campanhas em uma solução integrada.">
     <title>Media Pricing - <%= Page.Title %></title>
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a417f6b6-80c7-4e1c-99f0-dafe7a93e54f" data-blockingmode="auto" type="text/javascript"></script>
-    
+
     <%-- Bundles CSS --%>
     <%: Styles.Render("~/Content/jquery-ui") %>
     <%: Styles.Render("~/Content/master") %>
     <%: Styles.Render("~/Content/interno") %>
     <link rel="shortcut icon" href="/Inc/images/MediaPricing.ico" />
-        
+
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -28,13 +28,15 @@
         <div id="divMasterGeral" class="divMasterGeral">
             <div id="divMasterTopo">
                 <div id="divMasterLogo_Esq">
-                    <img src="/inc/img/logo_EtailProducao.png" alt="Media Pricing" />
+                    <img src="/inc/img/logo_EtailProducao.png" alt="IBOPE" />
+                    <span class="ibope-logo">IBOPE</span>
                 </div>
                 <div id="divMasterAlerta">
                     <img src="/inc/img/alerta.png" id="imgAlerta" runat="server" alt="Alerta" />
                 </div>
                 <div id="divMasterLogo_Dir">
-                    <img src="/inc/img/logo_ibope_media.png" alt="Ibope Media" />
+                    <img src="/inc/img/logo_ibope_media.png" alt="Mediapricing" />
+                    <span class="mediapricing-logo"><span class="mp-strong">Media</span><span class="mp-light">pricing</span></span>
                 </div>
             </div>
             <div id="divMasterMenu">
@@ -45,10 +47,32 @@
                 </asp:ContentPlaceHolder>
             </div>
             <div id="divMasterRodape" class="divMasterRodapeInterno">
-                <span class="versao">Versao -
-                <%= GetVersaoSistema() %></span>
-                <br />
-                Copyright by IBOPE <%= GetAnoCorrente() %>.
+                <div class="rodape-marca">IBOPE</div>
+                <div class="rodape-info">
+                    <div class="rodape-col">
+                        <h4>Escritório São Paulo</h4>
+                        <p>Av. Francisco Matarazzo,</p>
+                        <p>1350 &ndash; Água Branca</p>
+                        <p>05001-100 &ndash; Brasil</p>
+                        <p>São Paulo &ndash; SP</p>
+                        <p>T 55 11 3066 1500</p>
+                    </div>
+                    <div class="rodape-col">
+                        <h4>Plataforma &amp; Serviços</h4>
+                        <p>Audience Measurement &amp; Insight</p>
+                        <p>Consumer Targeting and Profiling</p>
+                        <p>Advertising Intelligence</p>
+                        <p>Sports Market Analytics &amp; Research</p>
+                    </div>
+                    <div class="rodape-col">
+                        <h4>Media Pricing</h4>
+                        <p><span class="versao">Versão <%= GetVersaoSistema() %></span></p>
+                    </div>
+                </div>
+                <div class="rodape-barra">
+                    <span>&copy; <%= GetAnoCorrente() %> IBOPE. Todos os direitos reservados.</span>
+                    <span>Governança Corporativa &middot; Política de Privacidade e Cookies &middot; Termos e Condições</span>
+                </div>
             </div>
         </div>
         <%--Divs de mensagem de alerta--%>
@@ -66,12 +90,12 @@
         </div>
         <%----%>
     </form>
-    
+
     <%-- Bundles JavaScript - movidos para antes de </body> para melhor performance --%>
     <%: Scripts.Render("~/Scripts/jquery") %>
     <%: Scripts.Render("~/Scripts/jqueryui") %>
     <%: Scripts.Render("~/Scripts/app") %>
-    
+
     <asp:ContentPlaceHolder ID="FooterContent" runat="server">
     </asp:ContentPlaceHolder>
     <asp:Literal ID="otherScripts" runat="server"></asp:Literal>
