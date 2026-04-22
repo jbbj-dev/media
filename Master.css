@@ -340,6 +340,7 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     height: 28px;
     cursor: help;
     display: block;
+    mix-blend-mode: multiply;
 }
 
 /* ============================================================
@@ -361,6 +362,8 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     margin: 0;
     padding: 0;
     width: 260px;
+    height: 36px;
+    overflow: hidden;
     background: var(--deep-blue);
     position: absolute;
     top: 0;
@@ -412,6 +415,8 @@ ul.menu li.titMenu::after
 
 #divMasterMenu ul.menu:hover
 {
+    height: auto;
+    overflow: visible;
     box-shadow: 0 12px 24px rgba(0, 30, 120, 0.18);
     z-index: 3000;
 }
