@@ -353,19 +353,20 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     overflow: visible;
     background: var(--deep-blue);
     position: relative;
+    box-sizing: border-box;
 }
 
 #divMasterMenu ul.menu
 {
     margin: 0;
+    padding: 0;
     width: 260px;
     background: var(--deep-blue);
-    height: auto;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0;
-    z-index: 0;
+    z-index: 100;
+    box-sizing: border-box;
 }
 
 ul.menu li
@@ -374,33 +375,36 @@ ul.menu li
     padding: 0;
     list-style: none;
     display: none;
+    box-sizing: border-box;
 }
 
 ul.menu li.titMenu
 {
-    height: 28px;
-    display: block;
-    padding: 8px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0;
     font-family: 'Geist', Verdana, sans-serif;
     font-weight: 600;
     color: var(--white);
-    text-align: center;
     background: var(--deep-blue);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-size: 12px;
     position: relative;
+    line-height: 1;
 }
 
 ul.menu li.titMenu::after
 {
     content: "";
     position: absolute;
-    right: 12px;
+    right: 16px;
     top: 50%;
     width: 0;
     height: 0;
-    transform: translateY(-25%);
+    transform: translateY(-50%);
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid var(--white);
