@@ -340,7 +340,6 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     height: 28px;
     cursor: help;
     display: block;
-    mix-blend-mode: multiply;
 }
 
 /* ============================================================
@@ -361,10 +360,10 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
 {
     margin: 0;
     padding: 0;
-    width: 260px;
+    width: 200px;
     height: 36px;
     overflow: hidden;
-    background: var(--deep-blue);
+    background: transparent;
     position: absolute;
     top: 0;
     left: 0;
@@ -385,13 +384,13 @@ ul.menu li.titMenu
 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 36px;
-    padding: 0;
+    padding: 0 16px;
     font-family: 'Geist', Verdana, sans-serif;
     font-weight: 600;
     color: var(--white);
-    background: var(--deep-blue);
+    background: var(--bright-blue);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-size: 12px;
@@ -402,21 +401,23 @@ ul.menu li.titMenu
 ul.menu li.titMenu::after
 {
     content: "";
-    position: absolute;
-    right: 16px;
-    top: 50%;
+    position: static;
+    display: inline-block;
+    margin-left: 10px;
     width: 0;
     height: 0;
-    transform: translateY(-50%);
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid var(--white);
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 #divMasterMenu ul.menu:hover
 {
     height: auto;
     overflow: visible;
+    background: var(--bright-blue);
     box-shadow: 0 12px 24px rgba(0, 30, 120, 0.18);
     z-index: 3000;
 }

@@ -32,7 +32,7 @@
                     <span class="ibope-logo">IBOPE</span>
                 </div>
                 <div id="divMasterAlerta">
-                    <img src="/inc/img/alerta.png" id="imgAlerta" runat="server" alt="Alerta" />
+                    <img src="/inc/img/alerta.svg" id="imgAlerta" runat="server" alt="Alerta" />
                 </div>
                 <div id="divMasterLogo_Dir">
                     <img src="/inc/img/logo_ibope_media.png" alt="Mediapricing" />
