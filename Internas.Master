@@ -47,32 +47,8 @@
                 </asp:ContentPlaceHolder>
             </div>
             <div id="divMasterRodape" class="divMasterRodapeInterno">
-                <div class="rodape-marca">IBOPE</div>
-                <div class="rodape-info">
-                    <div class="rodape-col">
-                        <h4>Escritório São Paulo</h4>
-                        <p>Av. Francisco Matarazzo,</p>
-                        <p>1350 &ndash; Água Branca</p>
-                        <p>05001-100 &ndash; Brasil</p>
-                        <p>São Paulo &ndash; SP</p>
-                        <p>T 55 11 3066 1500</p>
-                    </div>
-                    <div class="rodape-col">
-                        <h4>Plataforma &amp; Serviços</h4>
-                        <p>Audience Measurement &amp; Insight</p>
-                        <p>Consumer Targeting and Profiling</p>
-                        <p>Advertising Intelligence</p>
-                        <p>Sports Market Analytics &amp; Research</p>
-                    </div>
-                    <div class="rodape-col">
-                        <h4>Media Pricing</h4>
-                        <p><span class="versao">Versão <%= GetVersaoSistema() %></span></p>
-                    </div>
-                </div>
-                <div class="rodape-barra">
-                    <span>&copy; <%= GetAnoCorrente() %> IBOPE. Todos os direitos reservados.</span>
-                    <span>Governança Corporativa &middot; Política de Privacidade e Cookies &middot; Termos e Condições</span>
-                </div>
+                <span class="versao">Versão - <%= GetVersaoSistema() %></span>
+                <span>&copy; <%= GetAnoCorrente() %> IBOPE</span>
             </div>
         </div>
         <%--Divs de mensagem de alerta--%>

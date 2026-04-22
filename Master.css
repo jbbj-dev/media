@@ -278,7 +278,6 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 #divMasterLogo_Esq
@@ -289,6 +288,7 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     padding: 0;
     display: flex;
     align-items: center;
+    margin-right: auto; /* empurra alerta + logo dir para a direita */
 }
 
 #divMasterLogo_Esq img { display: none; } /* oculta logos legadas */
@@ -329,18 +329,17 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
 
 #divMasterAlerta
 {
-    float: none;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0 24px 0 auto;
     display: flex;
     align-items: center;
+    margin-right: 12px;
 }
 
 #divMasterAlerta img
 {
-    filter: brightness(0) invert(1);
+    width: 28px;
+    height: 28px;
+    cursor: help;
+    display: block;
 }
 
 /* ============================================================
@@ -443,81 +442,29 @@ ul.menu li a:hover { background: var(--bright-blue); color: var(--white); }
 }
 
 /* ============================================================
-   RODAPÉ - Blue footer (inspirado em fifty5blue.com)
+   RODAPÉ - barra compacta Deep Blue (Fifty5Blue BGS)
    ============================================================ */
 .divMasterRodape,
 .divMasterRodapeInterno
 {
-    padding: 40px 48px 24px 48px;
-    background-color: var(--bright-blue);
-    font: 12px 'Geist', Verdana, sans-serif;
-    color: var(--white);
+    padding: 12px 32px;
+    background-color: var(--deep-blue);
+    font: 11px 'Geist', Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.80);
     border-top: none;
     line-height: 1.5;
     margin: 0;
     width: auto;
     position: static;
-}
-
-.divMasterRodape .rodape-marca,
-.divMasterRodapeInterno .rodape-marca
-{
-    font-family: 'Geist', Verdana, sans-serif;
-    font-weight: 800;
-    font-size: 44px;
-    color: var(--white);
-    letter-spacing: 0.02em;
-    line-height: 1;
-    margin: 0 0 20px 0;
-    display: block;
-}
-
-.divMasterRodape .rodape-info,
-.divMasterRodapeInterno .rodape-info
-{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px;
-    margin-bottom: 28px;
-}
-
-.divMasterRodape .rodape-col h4,
-.divMasterRodapeInterno .rodape-col h4
-{
-    font-family: 'Geist', Verdana, sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--white);
-    margin: 0 0 10px 0;
-    letter-spacing: 0.01em;
-}
-
-.divMasterRodape .rodape-col p,
-.divMasterRodapeInterno .rodape-col p
-{
-    margin: 2px 0;
-    color: var(--white);
-    font-weight: 300;
-}
-
-.divMasterRodape .rodape-barra,
-.divMasterRodapeInterno .rodape-barra
-{
-    padding-top: 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 11px;
-    font-weight: 300;
 }
 
 .divMasterRodape a,
 .divMasterRodapeInterno a
 {
-    color: var(--white);
+    color: rgba(255, 255, 255, 0.80);
     text-decoration: none;
 }
 
@@ -529,8 +476,17 @@ ul.menu li a:hover { background: var(--bright-blue); color: var(--white); }
 
 .versao
 {
-    color: rgba(255, 255, 255, 0.75);
-    font-weight: 300;
+    color: rgba(255, 255, 255, 0.80);
+    font-weight: 400;
+}
+
+/* Mantém posicionamento fixo apenas na tela externa (login) */
+.divMasterRodape
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 div.clearfix { height: 1px; clear: both; }
