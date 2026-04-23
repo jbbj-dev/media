@@ -4,8 +4,55 @@
    Alinhado ao Fifty5Blue Brand Guidelines v0.09
    ============================================================= */
 
-/* ---- Tipografia Geist (Brand Guidelines pg. 64) ---- */
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&family=Geist+Mono:wght@400&display=swap');
+/* ---- Geist Mono (CDN - sem arquivo local disponível) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap');
+
+/* ---- Geist local — fontes em Inc/fonts (BGS pg. 64) ---- */
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-Thin.ttf') format('truetype');
+    font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-ExtraLight.ttf') format('truetype');
+    font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-Light.ttf') format('truetype');
+    font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-Regular.ttf') format('truetype');
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-Medium.ttf') format('truetype');
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-SemiBold.ttf') format('truetype');
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-Bold.ttf') format('truetype');
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-ExtraBold.ttf') format('truetype');
+    font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Geist';
+    src: url('/Inc/fonts/Geist-Black.ttf') format('truetype');
+    font-weight: 900; font-style: normal; font-display: swap;
+}
 
 /* ---- Paleta oficial (Brand Guidelines pg. 54) ---- */
 :root {
@@ -26,9 +73,11 @@
 
 html, body
 {
-    font: 14px 'Geist', Verdana, Arial, Helvetica, sans-serif;
+    font: 400 14px/1.5 'Geist', Verdana, sans-serif;
     height: 100%;
     color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body
@@ -300,7 +349,7 @@ div.produtoModelo input[type="text"].txtNome { width: 326px !important; }
     font-weight: 700;
     font-size: 36px;
     color: var(--white);
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     line-height: 1;
     text-decoration: none;
 }
@@ -461,7 +510,7 @@ ul.menu li a:hover { background: var(--bright-blue); color: var(--white); }
 {
     padding: 12px 32px;
     background-color: var(--deep-blue);
-    font: 11px 'Geist', Verdana, sans-serif;
+    font: 500 11px/1.5 'Geist', Verdana, sans-serif;
     color: rgba(255, 255, 255, 0.80);
     border-top: none;
     line-height: 1.5;

@@ -121,7 +121,7 @@ h2
     width: 194px;
     float: left;
     margin-top: 10px;
-    font: 11px 'Geist', Verdana, Arial, sans-serif;
+    font: 11px 'Geist', Verdana, sans-serif;
     color: var(--text-muted, #5a5f66);
 }
 
@@ -136,7 +136,7 @@ h2
     padding: 15px;
     height: 25px;
     background-color: var(--white, #fff);
-    font: 10px 'Geist', Verdana, sans-serif;
+    font: 500 10px/1.5 'Geist', Verdana, sans-serif;
     color: var(--text, #1a1a1a);
     border-top: dashed 1px var(--grey-4, #d7d7da);
 }
@@ -234,7 +234,7 @@ div#menu_principal
     font-weight: 700;
     color: var(--white, #fff);
     text-transform: uppercase;
-    font-family: 'Geist', Verdana, Arial, sans-serif;
+    font-family: 'Geist', Verdana, sans-serif;
     font-size: 11px;
     padding: 0 15px;
     text-align: left;
@@ -366,7 +366,7 @@ a.botao_azul
     color: var(--white, #fff);
     display: inline-block;
     float: right;
-    font: 700 12px 'Geist', Verdana, Arial, sans-serif;
+    font: 700 12px 'Geist', Verdana, sans-serif;
     height: auto;
     margin-right: 40px;
     padding: 8px 22px;
@@ -421,7 +421,7 @@ form { margin: 0; padding: 0; }
 
 .btconf
 {
-    font: 700 11px 'Geist', Arial, Helvetica, sans-serif;
+    font: 700 11px 'Geist', Verdana, sans-serif;
     text-transform: uppercase;
     background: var(--bright-blue, #0032ff);
     color: var(--white, #fff);
@@ -434,7 +434,7 @@ form { margin: 0; padding: 0; }
 
 .btconf2
 {
-    font: 700 11px 'Geist', Arial, Helvetica, sans-serif;
+    font: 700 11px 'Geist', Verdana, sans-serif;
     text-transform: none;
     background: var(--bright-blue, #0032ff);
     color: var(--white, #fff);
@@ -451,7 +451,7 @@ form { margin: 0; padding: 0; }
 {
     border: 1px solid var(--grey-4, #d7d7da);
     background-color: var(--white, #fff);
-    font-family: 'Geist', Verdana, Arial, Helvetica, sans-serif;
+    font-family: 'Geist', Verdana, sans-serif;
     font-size: 11px;
     color: var(--text, #1a1a1a);
     border-radius: 4px;
@@ -494,7 +494,7 @@ select, input
 {
     background-repeat: repeat-x;
     border: 1px solid var(--grey-4, #d7d7da);
-    font-family: 'Geist', Verdana, Tahoma, Arial, Sans-Serif;
+    font-family: 'Geist', Verdana, sans-serif;
     font-size: 12px;
     border-radius: 4px;
     padding: 3px 6px;
@@ -548,7 +548,7 @@ table.linhasAlternadas
     background: var(--white, #fff);
     border-left: solid var(--grey-3, #e8e8ee) 1px;
     border-right: solid var(--grey-3, #e8e8ee) 1px;
-    font-family: 'Geist', Arial, Helvetica, sans-serif;
+    font-family: 'Geist', Verdana, sans-serif;
     font-size: 12px;
     color: var(--text, #1a1a1a);
 }
@@ -585,7 +585,7 @@ table.linhasAlternadas tr:hover td { background-color: var(--grey-2, #f5f5f7); }
 
 table.linhasAlternadas td.tools a
 {
-    font-family: 'Geist', Arial, Helvetica, sans-serif;
+    font-family: 'Geist', Verdana, sans-serif;
     font-size: 12px;
     color: var(--bright-blue, #0032ff);
     float: left;
