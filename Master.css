@@ -4,9 +4,6 @@
    Alinhado ao Fifty5Blue Brand Guidelines v0.09
    ============================================================= */
 
-/* ---- Geist Mono (CDN - sem arquivo local disponível) ---- */
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap');
-
 /* ---- Geist local — fontes em Inc/fonts (BGS pg. 64) ---- */
 @font-face {
     font-family: 'Geist';
