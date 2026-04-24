@@ -28,7 +28,7 @@
         }
 
             .ulVarejos li a {
-                color: red !important;
+                color: var(--sig-red, #cf0033) !important;
                 margin-left: 5px;
                 float: right;
             }

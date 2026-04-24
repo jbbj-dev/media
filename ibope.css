@@ -490,7 +490,7 @@ form { margin: 0; padding: 0; }
 
 .checkbox { border: none; background-image: none; }
 
-select, input
+select, input, textarea
 {
     background-repeat: repeat-x;
     border: 1px solid var(--grey-4, #d7d7da);
@@ -500,7 +500,7 @@ select, input
     padding: 3px 6px;
 }
 
-select:focus, input:focus
+select:focus, input:focus, textarea:focus
 {
     outline: none;
     border-color: var(--bright-blue, #0032ff);
