@@ -497,6 +497,7 @@ ul.menu li a:hover { background: var(--bright-blue); color: var(--white); }
     color: var(--text);
     min-height: 350px;
     flex: 1;
+    position: relative;
 }
 
 /* ============================================================

@@ -31,9 +31,10 @@
                 AssociatedUpdatePanelID="UpdatePanel1"
                 runat="server">
                 <ProgressTemplate>
-                    <div style="background-color: lightgray; filter: alpha(opacity=60); opacity: 0.60; width: 100%; top: 0px; left: 0px; position: fixed; height: 100%;">
+                    <div style="background-color: rgba(0,30,120,0.35); width: 100%; top: 0px; left: 0px; position: fixed; height: 100%; z-index: 9000;">
                     </div>
-                    <div style="vertical-align: middle; top: 45%; position: fixed; right: 45%; background-color: White; border-radius: 10px;">
+                    <div style="vertical-align: middle; top: 45%; position: fixed; right: 45%; background-color: #ffffff; border-radius: 10px; z-index: 9001; padding: 12px 20px; box-shadow: 0 8px 24px rgba(0,30,120,0.18);">
+
                         <p style="margin-left: 5%;">Processando...</p>
                         <p>
                             <img src="../Inc/images/loading.gif" /></p>

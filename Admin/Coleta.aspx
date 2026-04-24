@@ -30,7 +30,7 @@
                     <span>Salvar Baixa Qualidade</span>
                 </asp:LinkButton>
                 <asp:LinkButton ID="btnSalvarInvalida" runat="server" OnClick="btnSalvarInvalida_Click" CssClass="botao_azul salvar">
-                    <span>Salvar Inválida</span>
+                    <span>Salvar Invï¿½lida</span>
                 </asp:LinkButton>
                 <asp:LinkButton ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" CssClass="botao_azul salvar">
                     <span>Salvar</span>
@@ -57,49 +57,49 @@
                                 ProdutoValorMax='<%#Eval("Produto.ValorMax")%>' ProdutoValorMin='<%#Eval("Produto.ValorMin")%>' />
                             <div class="precoAVista">
                                 <label>
-                                    Preço à vista</label>
+                                    Preï¿½o ï¿½ vista</label>
                                 <br />
                                 <asp:TextBox ID="txtOfertaPrecoAVista" runat="server" class="preco" Text='<%#Eval("PrecoVista")%>'></asp:TextBox>
                                 <asp:Label ID="lblPrecoComentario" runat="server" class="precoComentario" Style="display: none;"></asp:Label>
                             </div>
                             <div>
                                 <label>
-                                    1º Cond. pag.</label>
+                                    1ï¿½ Cond. pag.</label>
                                 <br />
                                 <asp:TextBox runat="server" ID="txtOfertaCondicaoPagamento1" Text='<%#Eval("CondicaoPagamento1")%>'
                                     class="condicaoPagamento1"></asp:TextBox>
                             </div>
                             <div>
                                 <label>
-                                    2º Cond. pag.</label>
+                                    2ï¿½ Cond. pag.</label>
                                 <br />
                                 <asp:TextBox runat="server" ID="txtOfertaCondicaoPagamento2" Text='<%#Eval("CondicaoPagamento2")%>'
                                     class="condicaoPagamento2"></asp:TextBox>
                             </div>
                             <div>
                                 <label>
-                                    Cartão 1</label>
+                                    Cartï¿½o 1</label>
                                 <br />
                                 <Ibope:TextBoxAutoComplete ID="autoCompleteCartao1" runat="server" repositorio="Cartoes"
                                     CampoId='<%#Eval("Cartao1.Id") %>' CampoNome='<%#Eval("Cartao1.Nome") %>' limparCamposCasoNaoExista="true" />
                             </div>
                             <div>
                                 <label>
-                                    Cartão 2</label>
+                                    Cartï¿½o 2</label>
                                 <br />
                                 <Ibope:TextBoxAutoComplete ID="autoCompleteCartao2" runat="server" repositorio="Cartoes"
                                     CampoId='<%#Eval("Cartao2.Id") %>' CampoNome='<%#Eval("Cartao2.Nome") %>' limparCamposCasoNaoExista="true" />
                             </div>
                             <div class="produtoModelo">
                                 <label>
-                                    Observação</label>
+                                    Observaï¿½ï¿½o</label>
                                 <br />
                                 <asp:TextBox ID="txtObservacao" runat="server" Text='<%#Eval("Observacao")%>'
                                     class="observacao"></asp:TextBox>
                             </div>
                             <div>
                                 <asp:Label ID="lblOfertaComentarioReprovacao" runat="server" Text='<%#Eval("ComentarioReprovacao")%>'
-                                    Width="315px" Font-Bold="True" ForeColor="#FF3300"></asp:Label>
+                                    Width="315px" CssClass="vermelho bold"></asp:Label>
                             </div>
                             <asp:LinkButton runat="server" ID="btnExcluirOferta" OnClick="btnExcluirOferta_Click"
                                 class="excluirOferta" />
