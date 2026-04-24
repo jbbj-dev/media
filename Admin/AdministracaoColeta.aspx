@@ -2,7 +2,6 @@
     CodeBehind="AdministracaoColeta.aspx.cs" Inherits="Ibope.MediaPricing.Web.Admin.AdministracaoColeta" %>
 
 <asp:Content ID="ContentHeader" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="../Inc/css/ibope.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         #ulAnunciantesVinculados {
             list-style-type: none;
@@ -74,9 +73,9 @@
         AssociatedUpdatePanelID="UpdatePanel1"
         runat="server">
         <ProgressTemplate>
-            <div style="background-color: lightgray; filter: alpha(opacity=60); opacity: 0.60; width: 100%; top: 0px; left: 0px; position: fixed; height: 100%;">
+            <div style="background-color: rgba(0,30,120,0.35); width: 100%; top: 0px; left: 0px; position: fixed; height: 100%; z-index: 9000;">
             </div>
-            <div style="vertical-align: middle; top: 45%; position: fixed; right: 45%; background-color: White; border-radius: 10px;">
+            <div style="vertical-align: middle; top: 45%; position: fixed; right: 45%; background-color: #ffffff; border-radius: 10px; z-index: 9001; padding: 12px 20px; box-shadow: 0 8px 24px rgba(0,30,120,0.18);">
                 <p style="margin-left: 5%;">Processando...</p>
                 <p>
                     <img src="../Inc/images/loading.gif" />
@@ -100,10 +99,7 @@
             <fieldset class="filtrosAdmUsuario canto_arredondado">
                 <br />
                 <div style="width: 100%;">
-                    <label style="font-size: 20px; font-family: Verdana; color: #3f7092; font-weight: bold; line-height: 23px; position: relative; width: 340px; line-height: 19px;">
-                        Anunciantes Vinculados</label>
-                    <br />
-                    <br />
+                    <h2>Anunciantes Vinculados</h2>
                 </div>
                 <div>
                     <asp:Repeater ID="rptAnunciantesVinculados" runat="server" OnItemCommand="rptAnunciantesVinculados_ItemCommand">
@@ -115,7 +111,7 @@
                                 <asp:HiddenField ID="hdnUsuarioAnuncianteId" runat="server" Value='<%#Eval("Id")%>' />
                                 <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
                                 <%#Eval("Anunciante.Nome")%>
-                                <asp:LinkButton ID="removerAnunciante" runat="server" Text="X" ForeColor="Red" Style="float: right;"></asp:LinkButton>
+                                <asp:LinkButton ID="removerAnunciante" runat="server" Text="X" CssClass="vermelho" Style="float: right;"></asp:LinkButton>
                             </li>
                         </ItemTemplate>
                         <FooterTemplate>
@@ -140,10 +136,7 @@
             <fieldset class="filtrosAdmUsuario canto_arredondado">
                 <br />
                 <div style="width: 100%;">
-                    <label style="font-size: 20px; font-family: Verdana; color: #3f7092; font-weight: bold; line-height: 23px; position: relative; width: 340px; line-height: 19px;">
-                        Segmentos Vinculados</label>
-                    <br />
-                    <br />
+                    <h2>Segmentos Vinculados</h2>
                 </div>
                 <div>
                     <asp:Repeater ID="rptSegmentosVinculados" runat="server" OnItemCommand="rptSegmentosVinculados_ItemCommand">
@@ -155,7 +148,7 @@
                                 <asp:HiddenField ID="hdnUsuarioSegmentoId" runat="server" Value='<%#Eval("Id")%>' />
                                 <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
                                 <%#Eval("Segmento.Nome")%>
-                                <asp:LinkButton ID="removerSegmento" runat="server" Text="X" ForeColor="Red" Style="float: right;"></asp:LinkButton>
+                                <asp:LinkButton ID="removerSegmento" runat="server" Text="X" CssClass="vermelho" Style="float: right;"></asp:LinkButton>
                             </li>
                         </ItemTemplate>
                         <FooterTemplate>

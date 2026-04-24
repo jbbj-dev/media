@@ -2,7 +2,6 @@
     CodeBehind="AdministracaoUsuario.aspx.cs" Inherits="Ibope.MediaPricing.Web.Admin.AdministracaoUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="../Inc/css/ibope.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Administração de usuários</h1>

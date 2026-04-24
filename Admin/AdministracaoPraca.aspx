@@ -3,12 +3,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
     <link href="../Inc/css/datatable_jui.css" rel="stylesheet" type="text/css" />
-    <link href="../Inc/css/ibope.css" rel="stylesheet" type="text/css" />    
-    <style type="text/css">
-        .ui-button {
-            padding: 0px 0px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Administração de praças</h1>
