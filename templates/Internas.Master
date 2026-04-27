@@ -75,5 +75,24 @@
     <asp:ContentPlaceHolder ID="FooterContent" runat="server">
     </asp:ContentPlaceHolder>
     <asp:Literal ID="otherScripts" runat="server"></asp:Literal>
+
+    <%-- Garante layout flex do rodapé: limpa height inline aplicado por scripts legados em #divMasterCorpo / #divMasterGeral --%>
+    <script type="text/javascript">
+        (function () {
+            function limparAlturaInline() {
+                var corpo = document.getElementById('divMasterCorpo');
+                if (corpo && corpo.style.height) { corpo.style.height = ''; }
+                var geral = document.getElementById('divMasterGeral');
+                if (geral && geral.style.height) { geral.style.height = ''; }
+            }
+            limparAlturaInline();
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', limparAlturaInline);
+            }
+            if (window.addEventListener) {
+                window.addEventListener('load', function () { setTimeout(limparAlturaInline, 0); });
+            }
+        })();
+    </script>
 </body>
 </html>
