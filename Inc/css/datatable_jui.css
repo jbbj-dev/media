@@ -109,7 +109,12 @@ table thead th div.DataTables_sort_wrapper span {
 	min-height: 302px;
 	_height: 302px;
 	clear: both;
-	overflow: auto;
+}
+
+.dataTables_wrapper::after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .dataTables_processing {

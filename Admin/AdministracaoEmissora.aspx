@@ -252,7 +252,8 @@
                     $("#<%=hdnTabSelecionada.ClientID %>").val(newIdx);
                 },
                 selected: 0,
-                autoHeight: false
+                autoHeight: false,
+                heightStyle: 'content'
             });
 
             /* Define Datatable Emissoras Replicadoras*/
