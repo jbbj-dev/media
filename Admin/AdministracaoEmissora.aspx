@@ -251,7 +251,8 @@
                     var newIdx = $('#tabs').tabs('option', 'selected');
                     $("#<%=hdnTabSelecionada.ClientID %>").val(newIdx);
                 },
-                selected: 0
+                selected: 0,
+                autoHeight: false
             });
 
             /* Define Datatable Emissoras Replicadoras*/
