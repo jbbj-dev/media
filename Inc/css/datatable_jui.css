@@ -118,12 +118,12 @@ table thead th div.DataTables_sort_wrapper span {
 	width: 250px;
 	margin-left: -125px;
 	margin-bottom:5px;
-	border: 1px solid #ddd;
+	border: 1px solid var(--grey-3, #e8e8ee);
 	text-align: center;
-	color: #999;
+	color: var(--text-muted, #5a5f66);
 	font-size: 14px;
 	padding: 2px 0;
-	background-color: white;
+	background-color: var(--white, #ffffff);
 }
 
 .dataTables_length {
@@ -161,13 +161,13 @@ table thead th div.DataTables_sort_wrapper span {
 	float: left;
 }
 
-.paginate_disabled_previous {background-image: url('../images/back_disabled.jpg');}
+.paginate_disabled_previous {background-image: url('/Inc/images/back_disabled.jpg');}
 
-.paginate_enabled_previous {background-image: url('../images/back_enabled.jpg');}
+.paginate_enabled_previous {background-image: url('/Inc/images/back_enabled.jpg');}
 
-.paginate_disabled_next {background-image: url('../images/forward_disabled.jpg');}
+.paginate_disabled_next {background-image: url('/Inc/images/forward_disabled.jpg');}
 
-.paginate_enabled_next {background-image: url('../images/forward_enabled.jpg');}
+.paginate_enabled_next {background-image: url('/Inc/images/forward_enabled.jpg');}
 
 
 
@@ -179,8 +179,8 @@ table {
 	width: 100%;
 	clear: both;
 	border-collapse: collapse;
-	border-left: 1px solid #aaa;
-	border-right: 1px solid #aaa;
+	border-left: 1px solid var(--grey-3, #e8e8ee);
+	border-right: 1px solid var(--grey-3, #e8e8ee);
 }
 
 table tfoot th {
@@ -189,12 +189,12 @@ table tfoot th {
 }
 
 table th {
-	border: 1px solid #aaa;
+	border: 1px solid var(--grey-4, #d7d7da);
 }
 
 table td {
 	padding: 3px 10px;
-	border: 1px solid #ebebeb;
+	border: 1px solid var(--grey-3, #e8e8ee);
 }
 
 table td.center {
@@ -203,12 +203,14 @@ table td.center {
 
 thead th
 {
-    background-color: #e8e8e8 !important;
-    border-color: #dbdbdb;
+    background-color: var(--grey-2, #f5f5f7) !important;
+    border-color: var(--grey-4, #d7d7da);
+    color: var(--deep-blue, #001e78);
+    font-weight: 700;
     height: 29px;
     }
 
-tfoot th {border-color: #dbdbdb;}
+tfoot th {border-color: var(--grey-4, #d7d7da);}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -216,23 +218,23 @@ tfoot th {border-color: #dbdbdb;}
  */
 
 .sorting_asc {
-	background: url('../images/sort_asc.png') no-repeat center right;
+	background: url('/Inc/images/sort_asc.png') no-repeat center right;
 }
 
 .sorting_desc {
-	background: url('../images/sort_desc.png') no-repeat center right;
+	background: url('/Inc/images/sort_desc.png') no-repeat center right;
 }
 
 .sorting {
-	background: url('../images/sort_both.png') no-repeat center right;
+	background: url('/Inc/images/sort_both.png') no-repeat center right;
 }
 
 .sorting_asc_disabled {
-	background: url('../images/sort_asc_disabled.png') no-repeat center right;
+	background: url('/Inc/images/sort_asc_disabled.png') no-repeat center right;
 }
 
 .sorting_desc_disabled {
-	background: url('../images/sort_desc_disabled.png') no-repeat center right;
+	background: url('/Inc/images/sort_desc_disabled.png') no-repeat center right;
 }
 
 
@@ -282,8 +284,8 @@ tr.even {background-color: white;}
 
 .top, .bottom {
 	padding: 15px;
-	background-color: #F5F5F5;
-	border: 1px solid #CCCCCC;
+	background-color: var(--grey-2, #f5f5f7);
+	border: 1px solid var(--grey-3, #e8e8ee);
 }
 
 .top .dataTables_info {
@@ -301,11 +303,11 @@ tr.even {background-color: white;}
 tfoot input {
 	margin: 0.5em 0;
 	width: 100%;
-	color: #444;
+	color: var(--text, #1a1a1a);
 }
 
 tfoot input.search_init {
-	color: #999;
+	color: var(--text-muted, #5a5f66);
 }
 
 td.group {
@@ -326,24 +328,29 @@ td.details {
 
 .paging_full_numbers span.paginate_button,
  	.paging_full_numbers span.paginate_active {
-	border: 1px solid #aaa;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	padding: 2px 5px;
+	border: 1px solid var(--grey-4, #d7d7da);
+	border-radius: 999px;
+	padding: 2px 10px;
 	margin: 0 3px;
 	cursor: pointer;
+	color: var(--deep-blue, #001e78);
 }
 
 .paging_full_numbers span.paginate_button {
-	background-color: #ddd;
+	background-color: var(--grey-2, #f5f5f7);
 }
 
 .paging_full_numbers span.paginate_button:hover {
-	background-color: #ccc;
+	background-color: var(--bright-blue, #0032ff);
+	border-color: var(--bright-blue, #0032ff);
+	color: var(--white, #ffffff);
 }
 
 .paging_full_numbers span.paginate_active {
-	background-color: #FFF;
+	background-color: var(--bright-blue, #0032ff);
+	border-color: var(--bright-blue, #0032ff);
+	color: var(--white, #ffffff);
+	font-weight: 700;
 }
 
 table tr.even.row_selected td {
@@ -361,23 +368,23 @@ table tr.odd.row_selected td {
 /* For the standard odd/even */
 
 tr.odd td.sorting_1, tr.odd td.sorting_2, tr.odd td.sorting_3,
-tr.even td.sorting_1, tr.even td.sorting_2, tr.even td.sorting_3 
+tr.even td.sorting_1, tr.even td.sorting_2, tr.even td.sorting_3
 {
-    border-color: #c9d9e4 !important;
+    border-color: rgba(0,50,255,0.12) !important;
     }
 
 
-tr.odd td.sorting_1 {background-color: #deebf4;}
+tr.odd td.sorting_1 {background-color: rgba(0,50,255,0.06);}
 
-tr.odd td.sorting_2 {background-color: #deebf4;}
+tr.odd td.sorting_2 {background-color: rgba(0,50,255,0.06);}
 
-tr.odd td.sorting_3 {background-color: #deebf4;}
+tr.odd td.sorting_3 {background-color: rgba(0,50,255,0.06);}
 
-tr.even td.sorting_1 {background-color: #eff5fa;}
+tr.even td.sorting_1 {background-color: rgba(0,50,255,0.03);}
 
-tr.even td.sorting_2 {background-color: #eff5fa;}
+tr.even td.sorting_2 {background-color: rgba(0,50,255,0.03);}
 
-tr.even td.sorting_3 {background-color: #eff5fa;}
+tr.even td.sorting_3 {background-color: rgba(0,50,255,0.03);}
 
 
 /* For the Conditional-CSS grading rows */
