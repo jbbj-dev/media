@@ -46,10 +46,6 @@
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-            <div id="divMasterRodape" class="divMasterRodapeInterno">
-                <span class="versao">Versão - <%= GetVersaoSistema() %></span>
-                <span>&copy; <%= GetAnoCorrente() %> IBOPE</span>
-            </div>
         </div>
         <%--Divs de mensagem de alerta--%>
         <div id="dialog-message" title="Atenção" style="display: none">
@@ -66,6 +62,12 @@
         </div>
         <%----%>
     </form>
+
+    <%-- Rodapé fora do form: posicionado por body (flex column) independente de JS interno --%>
+    <footer id="divMasterRodape" class="divMasterRodapeInterno">
+        <span class="versao">Versão - <%= GetVersaoSistema() %></span>
+        <span>&copy; <%= GetAnoCorrente() %> IBOPE</span>
+    </footer>
 
     <%-- Bundles JavaScript - movidos para antes de </body> para melhor performance --%>
     <%: Scripts.Render("~/Scripts/jquery") %>

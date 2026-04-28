@@ -71,25 +71,36 @@
 html, body
 {
     font: 400 14px/1.5 'Geist', Verdana, sans-serif;
-    height: 100%;
     color: var(--text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+html { height: 100%; }
 
 body
 {
     padding: 0;
     margin: 0;
     background: var(--grey-2);
+    /* body é o flex-container do sticky footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.formMaster { min-height: 100vh; }
+/* form ocupa todo o espaço acima do rodapé */
+.formMaster
+{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
 #divMasterGeral
 {
     min-width: 911px;
-    min-height: 100vh;
+    flex: 1;
     background: var(--white);
     display: flex;
     flex-direction: column;
@@ -514,7 +525,8 @@ ul.menu li a:hover { background: var(--bright-blue); color: var(--white); }
     line-height: 1.5;
     margin: 0;
     width: auto;
-    position: static;
+    /* filho flex de body: não comprime e fica sempre após o form */
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

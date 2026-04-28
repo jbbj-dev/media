@@ -37,13 +37,15 @@
                     <asp:ContentPlaceHolder ID="MainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-                <div id="divMasterRodape" class="divMasterRodape">
-                    <span class="versao">Versão - <%= GetVersaoSistema() %></span>
-                    <span>&copy; <%= GetAnoCorrente() %> IBOPE</span>
-                </div>
             </div>
         </div>
     </form>
+
+    <%-- Rodapé fora do form --%>
+    <footer id="divMasterRodape" class="divMasterRodape">
+        <span class="versao">Versão - <%= GetVersaoSistema() %></span>
+        <span>&copy; <%= GetAnoCorrente() %> IBOPE</span>
+    </footer>
     <%-- Bundles JavaScript - movidos para antes de </body> para melhor performance --%>
     <%: Scripts.Render("~/Scripts/jquery") %>
     <%: Scripts.Render("~/Scripts/jqueryui") %>
